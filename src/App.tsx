@@ -1,9 +1,10 @@
 import './App.scss';
+import { Header } from './Parts';
 
 function App() {
   return (
     <div className="App">
-      BLOCTO
+      <Header />
     </div>
   );
 }
