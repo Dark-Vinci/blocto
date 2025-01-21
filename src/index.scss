@@ -9,6 +9,42 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+@font-face {
+  font-family: 'fab_medium';
+  src: url('./assets/FactorB-Medium-a514aa39b216477f64e18c8c2753f141.woff') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'quay1';
+  src: url('./assets/QGYsz_wNahGAdqQ43Rh_c6DptfpA4cD3.woff2') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'fab_regular';
+  src: url('./assets/FactorB-Regular-96b41ef91f87fc757b584b4390f0b78a.woff') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'quay2';
+  src: url('./assets/QGYsz_wNahGAdqQ43Rh_cqDptfpA4cD3.woff2') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'quay3';
+  src: url('./assets/QGYsz_wNahGAdqQ43Rh_fKDptfpA4Q.woff2') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
 *,
   *::after,
   *::before {

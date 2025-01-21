@@ -4,4 +4,71 @@
 
 div.container {
     @include debug();
+    @include rectangle(90%, 72px);
+    position: fixed;
+    top: 50px;
+    z-index: 2;
+    border-radius: 100px;
+    @include flex(space-around, row, center);
+    font-family: 'fab_regular';
+
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.12);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10.6px);
+    -webkit-backdrop-filter: blur(10.6px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+
+    & > div.left {
+        @include rectangle(120px, 40px);
+        @include debug();
+        object-fit: cover;
+
+        img {
+            @include rectangle(100%, 100%);
+        }
+    }
+
+    & > div.right {
+        @include rectangle(80%, 100%);
+        @include flex(flex-end);
+        @include debug(green);
+
+        & > div:not(.wallet) {
+            @include rectangle(110px, 48px);
+            @include flex-center();
+            // margin-left: 15px;
+            transition: all 0.4s;
+            border-radius: 50px;
+            // @include debug(rgb(128, 0, 70));
+
+            &:hover {
+                background-color: rgba(255, 255, 255, 1.0);
+                color: blue; //todo; why is color not working??
+            }
+        }
+
+        & > div.world {
+            @include square(48px);
+            object-fit: cover;
+        }
+
+        & > div.wallet {
+            margin-left: 15px;
+            @include flex-center();
+            @include rectangle(160px, 50px);
+            button {
+                @include debug(yellow);
+                border-radius: 50px;
+                @include color-background(white, #0675fe);
+                @include rectangle(160px, 35px);
+                transition: all 0.5s;
+                border: none;
+
+                &:hover {
+                    background-color: rgba(6,117,254, 0.5);
+                }
+            }
+        }
+    }
 }

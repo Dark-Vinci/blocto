@@ -1,0 +1,24 @@
+@import '../../scss/utils.scss';
+
+div.container {
+    @include debug(green);
+    @include flex(space-around, row, center);
+    margin-right: 30px;
+    @include rectangle(240px, 45px);
+    border-radius: 50px;
+
+
+    & > div {
+        @include square(28px);
+        @include flex-center();
+        border-radius: 50%;
+        
+    }
+
+    & > button {
+        border: none;
+        outline: none;
+        font-size: 16px;
+        font-family: 'fab_regular';
+    }
+}

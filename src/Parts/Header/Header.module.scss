@@ -3,7 +3,7 @@
 
 div.container {
     @include debug();
-    @include rectangle(100vw, 810px);
+    @include rectangle(100vw, 100vh);
     background-image: url('https://blocto.io/static/banner-lg-57b18a09745068c8ceadaa270d0de709.png');
     background-position: right;
     background-size: 50%;
@@ -15,18 +15,37 @@ div.container {
         @include rectangle(1200px, 655px);
         @include flex(center, column, flex-start);
 
+        & > div {
+            margin-bottom: 10px;
+        }
+
 
         & > div:first-child, & > div:nth-child(2) {
             @include rectangle(520px, 80px);
             @include debug();
-            font-size: 50px;
+            font-size: 75px;
             text-align: left;
+            font-family: 'fab_medium';
+            color: '#1A202C';
         }
 
         & > div:nth-child(2) {
             color: #0275FF;
         }
 
-        & > div.description {}
+        & > div.description {
+            @include rectangle(620px, 52px);
+            @include debug();
+            font-family: 'fab_regular';
+            font-size: 20px;
+            text-align: left;
+            color: '#1A202C';
+        }
+
+        & > div.bots {
+            @include rectangle(100%, 45px);
+            @include debug();
+            @include flex(flex-start, row, center);
+        }
     }
 }

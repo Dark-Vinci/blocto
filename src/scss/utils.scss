@@ -32,7 +32,7 @@
 }
 
 @mixin debug($color: red) {
-    border: 1px solid $color;
+    // border: 2px solid $color;
 }
 
 @mixin flex($justify: center, $dir: row, $align: center) {
