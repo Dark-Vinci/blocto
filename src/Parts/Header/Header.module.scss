@@ -3,4 +3,30 @@
 
 div.container {
     @include debug();
+    @include rectangle(100vw, 810px);
+    background-image: url('https://blocto.io/static/banner-lg-57b18a09745068c8ceadaa270d0de709.png');
+    background-position: right;
+    background-size: 50%;
+    background-repeat: no-repeat;
+    @include flex-center();
+
+    & > div {
+        @include debug(yellow);
+        @include rectangle(1200px, 655px);
+        @include flex(center, column, flex-start);
+
+
+        & > div:first-child, & > div:nth-child(2) {
+            @include rectangle(520px, 80px);
+            @include debug();
+            font-size: 50px;
+            text-align: left;
+        }
+
+        & > div:nth-child(2) {
+            color: #0275FF;
+        }
+
+        & > div.description {}
+    }
 }
