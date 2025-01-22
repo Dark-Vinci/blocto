@@ -1,12 +1,13 @@
 import './App.scss';
 import { Header, Navigation } from './Parts';
+import { Slider } from './Parts/Slider';
 
 function App() {
   return (
     <div className="App">
       <Navigation />
       <Header />
-      <Header />
+      <Slider />
       <Header />
       <Header />
       <Header />
