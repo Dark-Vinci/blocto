@@ -17,7 +17,7 @@ export function Navigation(): JSX.Element {
                 </div>
 
                 <div className={style.wallet}>
-                    <button>DOWNLOAD WALLET</button>
+                    <button>Download wallet</button>
                 </div>
             </div>
         </div>
