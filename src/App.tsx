@@ -1,6 +1,5 @@
 import './App.scss';
-import { Header, Navigation } from './Parts';
-import { Slider } from './Parts/Slider';
+import { Header, Navigation, Body, Slider } from './Parts';
 
 function App() {
   return (
@@ -8,6 +7,7 @@ function App() {
       <Navigation />
       <Header />
       <Slider />
+      <Body />
       <Header />
       <Header />
       <Header />

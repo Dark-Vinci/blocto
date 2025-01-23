@@ -1,0 +1,75 @@
+@import '../../scss/utils.scss';
+
+div.container {
+    @include debug();
+    @include rectangle(100vw, auto);
+
+    & > div.first {
+        @include debug(yellow);
+        @include rectangle(100vw, 600px);
+        border-radius: 100px 100px 0 0;
+        @include color-background(white, #0275FF);
+        @include flex-center();
+
+        & > div.first_holder {
+            @include debug(aqua);
+            @include rectangle(85%, 435px);
+            @include flex(space-between, column, center);
+
+            & > div {
+                @include debug();
+                @include rectangle(100%, auto); //todo; update
+            }
+
+            & > div.button {
+                @include flex(flex-start, row, center);
+                button {
+                    @include rectangle(107px, 38px);
+                    border-radius: 30px;
+                    border: 1px solid white;
+                    @include color-background(white, transparent);
+                    font-size: 15px;
+                    font-family: 'fab_regular';
+                }
+            }
+
+            & > div.description {
+                p {
+                    @include rectangle(880px, 175px);
+                    text-align: left;
+                    font-size: 55px;
+                    line-height: 60px;
+                }
+            }
+
+            & > div.metric {
+                margin-top: 40px;
+                @include rectangle(100%, 125px);
+                @include flex(space-between, row, center);
+
+                & > div {
+                    @include debug();
+                    @include rectangle(300px, 115px);
+                    @include flex(space-between, column, center);
+                    font-family: 'fab_medium';
+
+                    & > p:first-child {
+                        @include debug();
+                        font-size: 50px;
+                        @include rectangle(180px, 73px);
+                    }
+
+                    & > p:nth-child(2) {
+                        font-family: 'fab_regular';
+                        @include debug();
+                        @include rectangle(180px, 73px);
+                    }
+                }
+
+                & > div:not(div.last) {
+                    border-right: 1px solid white;
+                }
+            }
+        }
+    }
+}
