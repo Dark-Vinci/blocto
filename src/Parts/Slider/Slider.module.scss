@@ -1,14 +1,13 @@
 @import '../../scss/utils.scss';
 
 div.the_container {
-    // position: relative;
     @include rectangle(100vw, 690px);
     @include debug(aqua);
     @include flex(center, column, center);
 
     & > div.container {
         @include debug();
-        // @include rectangle(100vw, 690px);
+        @include rectangle(100vw, 490px);
         @include flex-center();
     
         & > div:first-child {
@@ -24,5 +23,30 @@ div.the_container {
     & > div.nav {
         width: 100%;
         @include debug(gold);
+        @include flex-center();
+
+        & > div.holder {
+            @include debug(green);
+            @include rectangle(85%, 70px);
+            @include flex(flex-end, row, center);
+
+            & > button {
+                margin: 10px;
+                @include square(40px);
+                border-radius: 50%;
+                border: 1px solid grey;
+                transition: all 0.5s;
+                & > svg {
+                    stroke: rgb(62, 61, 61)
+                }
+
+                &:disabled {
+                    border: 1px solid rgb(231, 231, 231);
+                    & > svg {
+                        stroke: rgb(137, 137, 137);
+                    }
+                }
+            }
+        }
     }
 }

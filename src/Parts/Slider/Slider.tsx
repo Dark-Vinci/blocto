@@ -11,15 +11,17 @@ import { cards } from './data';
 import { Card } from './Card';
 
 
-export function Another(): JSX.Element {
+export function Slider(): JSX.Element {
   return (
     <div className={style.the_container}>
         <Swiper
             modules={[Navigation, Pagination, Scrollbar, A11y]}
             spaceBetween={0}
             slidesPerView={1}
-            navigation={{nextEl: "#custom-next", // Link to your custom "next" button
-                prevEl: "#custom-prev",}}
+            navigation={{
+                nextEl: "#custom-next",
+                prevEl: "#custom-prev"
+            }}
             pagination={{ clickable: false }}
             scrollbar={{ draggable: true, enabled: false}}
             onSwiper={(swiper: any) => console.log(swiper)}
@@ -44,64 +46,15 @@ export function Another(): JSX.Element {
         </Swiper>
 
         <div className={style.nav}>
-            <button id="custom-prev" className="custom-nav prev">---i</button>
-            <button id="custom-next" className="custom-nav next">i-----</button>
+            <div className={style.holder}>
+                <button id="custom-prev" className="custom-nav prev">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" transform="matrix(1, 0, 0, 1, 0, 0)"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M15 7L10 12L15 17" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                </button>
+                <button id="custom-next" className="custom-nav next">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" transform="matrix(-1, 0, 0, 1, 0, 0)"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M15 7L10 12L15 17"  stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                </button>
+            </div>
         </div>
     </div>
   );
 };
-
-// export function Slider(): JSX.Element {
-//     return (
-//         <div className={style.container}>
-//             {/* <div className={style.cards}>
-//                 <motion.div>
-//                     {
-//                         cards.map(({imgSrc, title, description, hasButton, index}, i) => {
-//                             return <motion.div>
-//                                 <Card
-//                                     hasButton={hasButton} 
-//                                     imgSrc={imgSrc} 
-//                                     description={description} 
-//                                     title={title} 
-//                                     index={index} 
-//                                 />
-//                             </motion.div>
-//                         })
-//                     }
-//                 </motion.div>
-//             </div> */}
-
-//             <div className="cards">
-
-//             </div>
-
-//             <Swiper
-//                 modules={[]}
-//                 pagination={{ clickable: true }}
-//                 navigation
-//                 loop={true}
-//                 slidesPerView={1}
-//                 spaceBetween={30}
-//                 // dir='horiazontal'
-//                 className="carousel-container"
-//             >
-//                     {
-//                         cards.map(({imgSrc, title, description, hasButton, index}) => {
-//                             return <SwiperSlide key = {title}>
-//                                 <Card
-//                                     hasButton={hasButton} 
-//                                     imgSrc={imgSrc} 
-//                                     description={description} 
-//                                     title={title} 
-//                                     index={index} 
-//                                 />
-//                             </SwiperSlide>
-//                         })
-//                     }
-//             </Swiper>
-
-//             <div className="buttons">BUTTONS</div>
-//         </div>
-//     )
-// }
