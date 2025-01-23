@@ -1,13 +1,14 @@
 import './App.scss';
 import { Header, Navigation } from './Parts';
-import { Slider } from './Parts/Slider';
+import { Another } from './Parts/Slider';
 
 function App() {
   return (
     <div className="App">
       <Navigation />
       <Header />
-      <Slider />
+      <Another />
+      {/* <Slider /> */}
       <Header />
       <Header />
       <Header />

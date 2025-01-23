@@ -1,0 +1,70 @@
+@import '../../../scss/utils.scss';
+
+div.card {
+    @include debug(yellow);
+    @include rectangle(1200px, 440px);
+    border-radius: 100px;
+    background-color: #EFF1F5;
+
+    @include flex-center();
+
+    & > div {
+        @include debug(blue);
+        object-fit: cover;
+        @include rectangle(85%, 80%);
+        @include flex();
+
+        & > img {
+            @include square(320px);
+            border-radius: 50px;
+        }
+
+        & > div.right {
+            @include rectangle(100%, 100%);
+            @include debug();
+            @include flex(center, column, flex-end);
+
+            & > div {
+                @include debug(aqua);
+                width: 70%;
+                margin-bottom: 10px;
+                & > p {
+                    text-align: left;
+                    font-family: 'fab_regular';
+                }
+            }
+
+            & > div.title {
+                & > p {
+                    font-size: 45px;
+                }
+            }
+
+            & > div.button {
+                @include debug(tomato);
+                @include flex(flex-start, row, center);
+
+                & > div.but_container {
+                    @include debug(grey);
+                    // object-fit: cover;
+                    @include rectangle(145px, 36px);
+                    @include flex(center, row, center);
+                    border-radius: 30px;
+
+                    & > div.svg {
+                        margin-right: 10px;
+                        @include square(30px);
+                        background-color: #0275FF;
+                        @include debug(yellow);
+                        object-fit: cover;
+                        border-radius: 50%;
+                    }
+
+                    & > button {
+                        border: none;
+                    }
+                }
+            }
+        }
+    }
+}
